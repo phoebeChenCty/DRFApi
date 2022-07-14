@@ -36,6 +36,10 @@ start django project
     django-admin startproject cfehome .
 there's a period in the end
 
+run django, quit by ctr-c
+
+    python manage.py runserver 8000
+
 ## rename folder in workspace
 
     Open workspace settings
@@ -61,3 +65,8 @@ there's a period in the end
 https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#removing-a-remote-repository
 
 ## create python client
+run client
+
+    (.venv) PS D:\Coding\DRFApi> python .\py_client\basic.py
+
+the endpoint must has the same port as server
