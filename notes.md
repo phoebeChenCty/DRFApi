@@ -35,3 +35,29 @@ start django project
     cd backend
     django-admin startproject cfehome .
 there's a period in the end
+
+## rename folder in workspace
+
+    Open workspace settings
+    Rename folder from command line: mv old new (shutdown ongoing terminal)
+    Rename the path in the folders settings of workspace, and save
+
+## Git
+1. create new git repo
+2. in root directory of the project folder
+    
+    git init
+3. create .gitignore file, add 
+
+    .venv/
+4. push to git
+
+        git add -A
+        git commit -m 'Added my project'
+        git remote add origin https://github.com/phoebeChenCty/DRFApi.git (use http)
+        git branch -M master
+        git push -u origin master
+5. switching remote urls from ssh to http
+https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#removing-a-remote-repository
+
+## create python client
