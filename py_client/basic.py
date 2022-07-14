@@ -2,7 +2,7 @@ import requests
 
 # endpoint = "http://httpbin.org/anything" # the url that this client talk to
 
-endpoint = "http://127.0.0.1:8000/"
+endpoint = "http://127.0.0.1:8000/api"
 
 # get_response = requests.get(endpoint) # library API
 
@@ -18,6 +18,10 @@ endpoint = "http://127.0.0.1:8000/"
 # get_response = requests.get(endpoint, data={"query":"Hello world"})
 # print(get_response.json()) # echo back, show in 'form'
 
-get_response = requests.get(endpoint) #, json={"query":"Hello world"})
+get_response = requests.get(endpoint)  # , json={"query":"Hello world"})
 print(get_response.text)
-print(get_response.status_code) # 200 means success, 404 means not found
+print(get_response.status_code)  # 200 means success, 404 means not found
+
+print(get_response.json())
+
+print(get_response.json()['message'])

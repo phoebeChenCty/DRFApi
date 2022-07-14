@@ -29,16 +29,32 @@ create requirements.txt
 install package
     python -m pip install numpy
 
+install autopep8 for formating
+
 ## Django
-start django project
+1. start django project
 
     cd backend
     django-admin startproject cfehome .
 there's a period in the end
 
-run django, quit by ctr-c
+2. run django, quit by ctr-c
 
     python manage.py runserver 8000
+
+3. start a new app named api in django
+
+    (.venv) PS D:\Coding\DRFApi\backend> python manage.py startapp api
+
+    add the name to cfehome\setting.py INSTALLED_APPS
+    
+4. creat view in api app
+
+    def api_home in view.py
+    
+    creat urls.py in api folder, add urlpatterns
+
+    add url in cfehome\urls.py
 
 ## rename folder in workspace
 
