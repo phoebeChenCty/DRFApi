@@ -52,7 +52,7 @@ there's a period in the end
 
     def api_home in view.py
     
-    creat urls.py in api folder, add urlpatterns
+    creat urls.py in api folder, add urlpatterns=[], not use {}
 
     add url in cfehome\urls.py
 
@@ -62,6 +62,9 @@ there's a period in the end
 
 6. open django shell
     python manage.py shell
+
+7. Django REST Framework
+    add rest_framework to cfehome\setting.py INSTALLED_APPS
     
 ## rename folder in workspace
 

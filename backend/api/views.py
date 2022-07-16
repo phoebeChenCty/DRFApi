@@ -50,9 +50,8 @@ from products.serializers import ProductSerializer
 #     return Response(data)
 
 @api_view(["GET"])
-def api_home(request: WSGIRequest, *args, **kwargs):
+def api_home(request, *args, **kwargs):
     instance = Product.objects.all().order_by("?").first()
-    assert isinstance(instance, Product)
     data = {}
     if instance:
         # data = model_to_dict(model_data, fields=['id', 'title', 'price'])
