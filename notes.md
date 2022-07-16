@@ -56,6 +56,13 @@ there's a period in the end
 
     add url in cfehome\urls.py
 
+5. creat database (change models.py first)
+    python manage.py makemigrations # let the database know everything in models.py
+    python manage.py migrate # update the database based on the change of models.py
+
+6. open django shell
+    python manage.py shell
+    
 ## rename folder in workspace
 
     Open workspace settings
