@@ -3,6 +3,9 @@ from django.core.handlers.wsgi import WSGIRequest
 from django.forms.models import model_to_dict
 import json
 
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+
 from products.models import Product
 # the client want json file as reponse
 
@@ -20,15 +23,27 @@ from products.models import Product
 #     data['content_type'] = request.content_type
 #     return JsonResponse(data)
 
+# def api_home(request: WSGIRequest, *args, **kwargs):
+#     model_data = Product.objects.all().order_by("?").first()
+#     assert isinstance(model_data, Product)
+#     data = {}
+#     if model_data:
+#         # data['id'] = model_data.id
+#         # data['title'] = model_data.title
+#         # data['content'] = model_data.content
+#         # data['price'] = model_data.price
+#         # serialization, model instance->python dict->return JSON to client
+#         data = model_to_dict(model_data, fields=['id', 'title', 'price'])
+#     return JsonResponse(data)
+
+# @api_view(["GET", "POST"])
+@api_view(["GET"])
 def api_home(request: WSGIRequest, *args, **kwargs):
+    # if request.method != "POST":
+    #     return Response({"detail": "GET not allowed"}, status=405)
     model_data = Product.objects.all().order_by("?").first()
     assert isinstance(model_data, Product)
     data = {}
     if model_data:
-        # data['id'] = model_data.id
-        # data['title'] = model_data.title
-        # data['content'] = model_data.content
-        # data['price'] = model_data.price
-        # serialization, model instance->python dict->return JSON to client
         data = model_to_dict(model_data, fields=['id', 'title', 'price'])
-    return JsonResponse(data)
+    return Response(data)
