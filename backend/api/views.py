@@ -7,6 +7,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
 from products.models import Product
+from products.serializers import ProductSerializer
 # the client want json file as reponse
 
 
@@ -37,13 +38,23 @@ from products.models import Product
 #     return JsonResponse(data)
 
 # @api_view(["GET", "POST"])
+# @api_view(["GET"])
+# def api_home(request: WSGIRequest, *args, **kwargs):
+#     # if request.method != "POST":
+#     #     return Response({"detail": "GET not allowed"}, status=405)
+#     model_data = Product.objects.all().order_by("?").first()
+#     assert isinstance(model_data, Product)
+#     data = {}
+#     if model_data:
+#         data = model_to_dict(model_data, fields=['id', 'title', 'price'])
+#     return Response(data)
+
 @api_view(["GET"])
 def api_home(request: WSGIRequest, *args, **kwargs):
-    # if request.method != "POST":
-    #     return Response({"detail": "GET not allowed"}, status=405)
-    model_data = Product.objects.all().order_by("?").first()
-    assert isinstance(model_data, Product)
+    instance = Product.objects.all().order_by("?").first()
+    assert isinstance(instance, Product)
     data = {}
-    if model_data:
-        data = model_to_dict(model_data, fields=['id', 'title', 'price'])
+    if instance:
+        # data = model_to_dict(model_data, fields=['id', 'title', 'price'])
+        data = ProductSerializer(instance).data
     return Response(data)
