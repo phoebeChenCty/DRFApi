@@ -1,5 +1,6 @@
 from django.http import JsonResponse
 from django.core.handlers.wsgi import WSGIRequest
+from django.forms.models import model_to_dict
 import json
 
 from products.models import Product
@@ -24,9 +25,10 @@ def api_home(request: WSGIRequest, *args, **kwargs):
     assert isinstance(model_data, Product)
     data = {}
     if model_data:
-        data['id'] = model_data.id
-        data['title'] = model_data.title
-        data['content'] = model_data.content
-        data['price'] = model_data.price
+        # data['id'] = model_data.id
+        # data['title'] = model_data.title
+        # data['content'] = model_data.content
+        # data['price'] = model_data.price
         # serialization, model instance->python dict->return JSON to client
+        data = model_to_dict(model_data, fields=['id', 'title', 'price'])
     return JsonResponse(data)
