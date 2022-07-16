@@ -38,7 +38,7 @@ install autopep8 for formating
     django-admin startproject cfehome .
 there's a period in the end
 
-2. run django, quit by ctr-c
+2. run server, quit by ctr-c
 
     python manage.py runserver 8000
 
