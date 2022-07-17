@@ -49,11 +49,23 @@ from products.serializers import ProductSerializer
 #         data = model_to_dict(model_data, fields=['id', 'title', 'price'])
 #     return Response(data)
 
-@api_view(["GET"])
+# @api_view(["POST"])
+# def api_home(request, *args, **kwargs):
+#     instance = Product.objects.all().order_by("?").first()
+#     data = {}
+#     if instance:
+#         # data = model_to_dict(model_data, fields=['id', 'title', 'price'])
+#         data = ProductSerializer(instance).data
+#     return Response(data)
+
+@api_view(["POST"])
 def api_home(request, *args, **kwargs):
-    instance = Product.objects.all().order_by("?").first()
-    data = {}
-    if instance:
-        # data = model_to_dict(model_data, fields=['id', 'title', 'price'])
-        data = ProductSerializer(instance).data
-    return Response(data)
+    serializer = ProductSerializer(data=request.data)
+    # check if an instance (Product) can be create successfully
+    if serializer.is_valid(raise_exception=True):
+        # instance = serializer.save() # add new instance to database, create a database instance by default value /input value
+        # print("instance: ", instance)
+        data = serializer.data
+        print("data: ", data)
+        return Response(data)
+    return Response({"invalid": "not good data"}, status=400)
