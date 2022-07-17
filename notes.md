@@ -65,6 +65,13 @@ there's a period in the end
 
 7. Django REST Framework
     add rest_framework to cfehome\setting.py INSTALLED_APPS
+
+8. use generics api view
+    add ProductDetailAPIView(generics.RetrieveAPIView) in Product/views.py
+
+9. create all database instance urls in one place.
+    create urls.py in product
+    update cfehome/urls.py
     
 ## rename folder in workspace
 
