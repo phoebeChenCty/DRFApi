@@ -4,4 +4,5 @@ pyyaml
 requests
 django-cors-headers
 celery
+gevent
 redis

@@ -99,6 +99,7 @@ install autopep8 for formating
     2. start redis (in wsl)
         redis-server
     3. python -m pip install celery
+        python -m pip install gevent (celery not supporting windows, need gevent to run celery)
         python -m pip install redis
     4. edit __init__.py, celery.py, settings.py in cfehome folder to set celery
     5. queue up task and start worker: in backend folder
@@ -108,7 +109,8 @@ install autopep8 for formating
             >>> debug_task.delay() # add task to queue
             >>> exit()
     6. start a worker to process the task, in backend folder
-        celery -A cfehome.celery worker --loglevel=info
+        celery -A cfehome.celery worker --loglevel=info -P gevent
+        ctrl-c ctrl-c to exit 
 
 
     
