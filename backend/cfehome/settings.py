@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'api',
     'products',
     "corsheaders",
+    "fb"
 ]
 
 MIDDLEWARE = [

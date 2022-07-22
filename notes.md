@@ -99,7 +99,7 @@ install autopep8 for formating
     2. start redis (in wsl)
         redis-server
     3. python -m pip install celery
-        python -m pip install gevent (celery not supporting windows, need gevent to run celery)
+        python -m pip install gevent (celery not supporting windows, need gevent to run celery, https://stackoverflow.com/questions/62524908/task-receive-but-doesnt-excute)
         python -m pip install redis
     4. edit __init__.py, celery.py, settings.py in cfehome folder to set celery
     5. queue up task and start worker: in backend folder
@@ -112,6 +112,9 @@ install autopep8 for formating
         celery -A cfehome.celery worker --loglevel=info -P gevent
         ctrl-c ctrl-c to exit 
 
+## use celery for long-running process
+    https://www.youtube.com/watch?v=yRClWC3pYMs&list=PL4hq-GKoM2Tq7q6bnTxOvHcsrZ28mo4Mw&index=7&t=2s
+    1. create app fb
 
     
 ## rename folder in workspace
