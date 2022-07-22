@@ -98,11 +98,19 @@ install autopep8 for formating
     1. install redis in wsl: https://developer.redis.com/create/windows/
     2. start redis (in wsl)
         redis-server
-
     3. python -m pip install celery
         python -m pip install redis
+    4. edit __init__.py, celery.py, settings.py in cfehome folder to set celery
+    5. queue up task and start worker: in backend folder
+        in Django shell:
+            python manage.py shell
+            >>> from cfehome.celery import debug_task
+            >>> debug_task.delay() # add task to queue
+            >>> exit()
+    6. start a worker to process the task, in backend folder
+        celery -A cfehome.celery worker --loglevel=info
 
-    4. edit __init__.py, celery.py, settings.py in cfmhome folder to set celery
+
     
 ## rename folder in workspace
 
