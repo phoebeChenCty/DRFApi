@@ -13,14 +13,14 @@ output:
 
 ## venv 
 creat virtual env in this folder
-start powershell in under the folder D:\Coding\DRFApiYouTube
+start powershell in under the folder D:\Coding\DRFApi
 
     python -m venv .venv
 
 activate env
 start cmd or powershell
 
-    D:\Coding\DRFApiYouTube>.venv\Scripts\activate
+    D:\Coding\DRFApi>.venv\Scripts\activate
 
 install package
 create requirements.txt
@@ -37,7 +37,7 @@ install autopep8 for formating
 
     cd backend
     django-admin startproject cfehome .
-there's a period in the end
+    there's a period in the end
 
 2. run server, quit by ctr-c
 
@@ -74,7 +74,7 @@ there's a period in the end
     create urls.py in product
     update cfehome/urls.py
 
-## install django-cors-headers
+## install django-cors-headers, so that frontend can visit
     https://pypi.org/project/django-cors-headers/
     1. 
         INSTALLED_APPS = [
@@ -93,6 +93,14 @@ there's a period in the end
         CORS_ALLOWED_ORIGINS = [
         "http://localhost:3000",
         ]
+
+## Celery & redis
+    1. install redis in wsl: https://developer.redis.com/create/windows/
+    2. start redis (in wsl)
+        redis-server
+
+    2. python -m pip install celery
+        python -m pip install redis
     
 ## rename folder in workspace
 
