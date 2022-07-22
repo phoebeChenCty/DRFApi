@@ -112,9 +112,23 @@ install autopep8 for formating
         celery -A cfehome.celery worker --loglevel=info -P gevent
         ctrl-c ctrl-c to exit 
 
-## use celery for long-running process
+## use celery for long-running process, fibonacci sequence calculation
     https://www.youtube.com/watch?v=yRClWC3pYMs&list=PL4hq-GKoM2Tq7q6bnTxOvHcsrZ28mo4Mw&index=7&t=2s
-    1. create app fb
+    1. create app fb, make models.py, view.py, urls.py, task.py, templates. 
+        https://github.com/bennett39/celery39/tree/celery-fib/celery_tutorial/fib
+    2. update urls.py in cfehome
+    3. change TEMPLATES in settings.py
+        'DIRS': [BASE_DIR, os.path.join(BASE_DIR, 'templates')]
+    4. python manage.py makemigrations
+        python manage.py migrate
+    5. run:
+        redis-server (in wsl)
+        python .\manage.py runserver 8000
+        celery -A cfehome.celery worker --loglevel=info -P gevent
+        input number in http://127.0.0.1:8000/fb/start, refresh page to get result
+    6. remove previous calculation result
+        python manage.py delete_calculations
+
 
     
 ## rename folder in workspace
