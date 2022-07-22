@@ -8,8 +8,8 @@ output:
 ---
 
 # Django Rest Framework Api
-https://www.youtube.com/watch?v=c708Nf0cHrs&list=PL4hq-GKoM2Tq7q6bnTxOvHcsrZ28mo4Mw&index=4&t=130s
-https://www.youtube.com/watch?v=VBqJ0-imSMU&t=14573s
+    https://www.youtube.com/watch?v=c708Nf0cHrs&list=PL4hq-GKoM2Tq7q6bnTxOvHcsrZ28mo4Mw&index=4&t=130s
+    https://www.youtube.com/watch?v=VBqJ0-imSMU&t=14573s (router and model viewset)
 
 ## venv 
 creat virtual env in this folder
