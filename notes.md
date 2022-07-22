@@ -73,6 +73,26 @@ there's a period in the end
 9. create all database instance urls in one place.
     create urls.py in product
     update cfehome/urls.py
+
+## install django-cors-headers
+    https://pypi.org/project/django-cors-headers/
+    1. 
+        INSTALLED_APPS = [
+        ...,
+        "corsheaders",
+        ...,
+        ]
+    2. 
+        MIDDLEWARE = [
+        ...,
+        "corsheaders.middleware.CorsMiddleware",
+        "django.middleware.common.CommonMiddleware",
+        ...,
+        ]
+    3. 
+        CORS_ALLOWED_ORIGINS = [
+        "http://localhost:3000",
+        ]
     
 ## rename folder in workspace
 
