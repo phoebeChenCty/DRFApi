@@ -99,8 +99,10 @@ install autopep8 for formating
     2. start redis (in wsl)
         redis-server
 
-    2. python -m pip install celery
+    3. python -m pip install celery
         python -m pip install redis
+
+    4. edit __init__.py, celery.py, settings.py in cfmhome folder to set celery
     
 ## rename folder in workspace
 
