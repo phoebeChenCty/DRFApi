@@ -161,3 +161,11 @@ run client
     (.venv) PS D:\Coding\DRFApi> python .\py_client\basic.py
 
 the endpoint must has the same port as server
+
+## access server from cell phone
+1. find server's ip by 
+    ipconfig
+2. add ip in to ALLOWED_HOSTS in settings.py
+3. run server as
+    python manage.py runserver 192.168.254.125:8000
+3. access server page from cell phone by http://192.168.254.125:8000/products/
