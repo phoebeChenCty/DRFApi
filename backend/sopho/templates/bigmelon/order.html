@@ -2,7 +2,7 @@
 
 <head>
     {% load static %}
-    <script src="{% static 'script.js' %}"></script>
+    <!-- <script src="{% static 'script.js' %}"></script> -->
     <link rel="stylesheet" href="{% static 'style.css' %}" />
 </head>
 
@@ -15,15 +15,17 @@
     <form method="post">
         {% csrf_token %}
         <div class="buttons has-addons">
-            <button name="c1">c1</button>
-            <button name="c2">c2</button>
+            <button name="c1" onclick="myFunction()">c1</button>
+            <button name="c2" onclick="myFunction()">c2</button>
 
         </div>
-        <!-- <label for="title">
-            <input type="text" name="title" id="title">
-            <input type="submit" value="Submit">
-            <input type="reset"> -->
     </form>
+    <script>
+        function myFunction() {
+            alert("Your order has been sent to our best driver PhoPho");
+
+        }
+    </script>
 
 </body>
 
