@@ -1,6 +1,10 @@
 <html>
 
-<head></head>
+<head>
+    {% load static %}
+    <script src="{% static 'script.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+</head>
 
 <body>
 
@@ -13,7 +17,7 @@
 
     </h3>
     {% load static %}
-    <img src="{% static 'sample_image.jpg' %}" alt="My image">
+    <img id='img' src="{% static 'sample_image.jpg' %}" alt="My image" class="rotate linear infinite">
 </body>
 
 </html>
