@@ -51,17 +51,11 @@ body {
     animation-iteration-count: infinite;
 }
 
-#nono {
-    position: relative;
-    top: 30px;
-    left: 0;
-    border: 5px black solid;
-}
 
 #mybody {
-    position: relative;
-    top: 0;
-    left: 0;
+    position: absolute;
+    top: 200px;
+    left: 10px;
     border: 1px red solid;
 }
 
@@ -69,5 +63,19 @@ body {
     position: absolute;
     top: 500px;
     left: 500px;
+    border: 1px green solid;
+}
+
+#car {
+    position: absolute;
+    top: 200px;
+    left: 10px;
+    border: 1px red solid;
+}
+
+#myhead {
+    position: absolute;
+    top: 500px;
+    left: 50px;
     border: 1px green solid;
 }

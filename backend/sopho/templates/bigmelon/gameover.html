@@ -10,16 +10,18 @@
 
     <h3>
         {% if win %}
-        congratulation!
+        congratulation! you win again.
         {% else %}
-        sorry...
+        sorry... you lose this time.
         {% endif %}
-
     </h3>
-    <div id="nono">
+    <h3>
+        you have ordered cake already. Your driver PhoPho is on the way
+    </h3>
+    <div id="driving">
         {% load static %}
-        <img id='mybody' src="{% static 'daie.PNG' %}" alt="My image">
-        <img id='myfinger' src="{% static 'sample_image.jpg' %}" alt="My image" class="rotate linear infinite">
+        <img id='car' src="{% static 'daie.PNG' %}" alt="My image">
+        <img id='myhead' src="{% static 'sample_image.jpg' %}" alt="My image" class="rotate linear infinite">
     </div>
 </body>
 
