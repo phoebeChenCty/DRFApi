@@ -36,6 +36,16 @@ class GameOverOrderView(View):
     def get(self, request):
         return render(request, 'bigmelon/order.html')
 
+    def post(self, request):
+        for title in ['c1', 'c2']:
+            if title in request.POST:
+                print(title)
+                cake = Cake.objects.first()
+                cake.title = title
+                cake.save()
+                context = {'win': True}
+                return render(request, 'bigmelon/gameover.html', context=context)
+
 
 class CakeViewSet(viewsets.ModelViewSet):
     queryset = Cake.objects.all()

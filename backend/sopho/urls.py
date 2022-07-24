@@ -12,5 +12,6 @@ urlpatterns = [
     path('bigmelon/gameover', views.GameOverView.as_view()),
     path('bigmelon/nono', views.GameOverNoNoView.as_view(), name='nono'),
     path('bigmelon/order', views.GameOverOrderView.as_view(), name='order'),
+    # http://192.168.254.125:8000/sopho/cakes/1/
     path('cakes/', include(router.urls))
 ]
