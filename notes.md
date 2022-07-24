@@ -169,3 +169,6 @@ the endpoint must has the same port as server
 3. run server as
     python manage.py runserver 192.168.254.125:8000
 3. access server page from cell phone by http://192.168.254.125:8000/products/
+
+## add static img to tempelate
+    https://docs.djangoproject.com/en/4.0/howto/static-files/
