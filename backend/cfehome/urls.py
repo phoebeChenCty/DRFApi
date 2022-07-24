@@ -21,4 +21,6 @@ urlpatterns = [
     path('api/', include('api.urls')),
     path('products/', include('products.urls')),
     path('fb/', include('fb.urls')),
+    path('sopho/', include('sopho.urls')),
+
 ]
