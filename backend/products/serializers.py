@@ -1,4 +1,3 @@
-from lib2to3.pgen2.grammar import opmap
 from rest_framework import serializers
 from .models import Product
 
