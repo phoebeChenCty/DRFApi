@@ -50,3 +50,24 @@ body {
 .infinite {
     animation-iteration-count: infinite;
 }
+
+#nono {
+    position: relative;
+    top: 30px;
+    left: 0;
+    border: 5px black solid;
+}
+
+#mybody {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 1px red solid;
+}
+
+#myfinger {
+    position: absolute;
+    top: 500px;
+    left: 500px;
+    border: 1px green solid;
+}
