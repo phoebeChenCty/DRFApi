@@ -7,7 +7,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     min-height: 100vh;
     /* text-align: center; */
-    background-color: #282c34;
+    background-color: black;
     color: white;
     padding: 20px
 }
@@ -54,28 +54,28 @@ body {
 
 #mybody {
     position: absolute;
-    top: 200px;
+    top: 100px;
     left: 10px;
-    border: 1px red solid;
+    /* border: 1px red solid; */
 }
 
 #myfinger {
     position: absolute;
-    top: 500px;
-    left: 500px;
-    border: 1px green solid;
+    top: 100px;
+    left: 10px;
+    /* border: 1px green solid; */
 }
 
 #car {
     position: absolute;
     top: 200px;
     left: 10px;
-    border: 1px red solid;
+    /* border: 1px red solid; */
 }
 
 #myhead {
     position: absolute;
-    top: 500px;
-    left: 50px;
-    border: 1px green solid;
+    top: 150px;
+    left: 140px;
+    /* border: 5px green solid; */
 }

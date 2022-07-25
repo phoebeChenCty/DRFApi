@@ -37,7 +37,7 @@ class GameOverOrderView(View):
         return render(request, 'bigmelon/order.html')
 
     def post(self, request):
-        for title in ['c1', 'c2']:
+        for title in ['tiramisu', 'ladym', 'birthdaycake']:
             if title in request.POST:
                 print(title)
                 cake = Cake.objects.first()

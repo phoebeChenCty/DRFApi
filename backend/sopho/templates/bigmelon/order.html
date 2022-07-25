@@ -9,15 +9,25 @@
 <body>
 
     <h3>
-        order page
-
+        Congratulation! You created Big PhoPho successfully!
+    </h3>
+    <h3>
+        As a reward, PhoPho Bakery will send you a cake for free.</h3>
+    <h3>
+        Here are three types of cake. Please click one to order.
     </h3>
     <form method="post">
         {% csrf_token %}
         <div class="buttons has-addons">
-            <button name="c1" onclick="myFunction()">c1</button>
-            <button name="c2" onclick="myFunction()">c2</button>
-
+            <ul>
+                {% load static %}
+                <li><button name="tiramisu" onclick="myFunction()"><img src="{% static 'tiramisu.jpg' %}"
+                            alt="tiramisu"></button></li>
+                <li><button name="ladym" onclick="myFunction()"><img src="{% static 'ladym.jpg' %}"
+                            alt="ladym"></button></li>
+                <li><button name="birthdaycake" onclick="myFunction()"><img src="{% static 'birthdaycake.jpg' %}"
+                            alt="birthdaycake"></button></li>
+            </ul>
         </div>
     </form>
     <script>
