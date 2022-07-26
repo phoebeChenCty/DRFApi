@@ -1,16 +1,31 @@
 <html>
 
-<head></head>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+
+    <style>
+        h3 {
+            text-align: center;
+        }
+    </style>
+
+</head>
 
 <body>
-
     <h3>
         {% if rest_times >= 0 %}
-        change fruit successfully, you have {{rest_times}} chance left
+        Change fruit successfully. You have {{rest_times}} chance left.
         {% else %}
-        sorry, you run out of chance
+        Sorry, you run out of chance...
         {%endif%}
     </h3>
 </body>
+
+<script type="text/javascript">
+    window.onload = function () {
+        alert("Kiss PhoPho and you can change the fruit");
+    }
+</script>
 
 </html>
