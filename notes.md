@@ -150,7 +150,7 @@ install autopep8 for formating
         git add -A
         git commit -m 'Added my project'
         git remote add origin https://github.com/phoebeChenCty/DRFApi.git (use http)
-        git branch -M master
+        git branch -M master (make sure has a new file to push)
         git push -u origin master
 5. switching remote urls from ssh to http
 https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#removing-a-remote-repository
